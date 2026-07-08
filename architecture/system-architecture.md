@@ -7,7 +7,7 @@ flowchart TD
 
     C --> D[Vendor Documents]
     C --> E[Business Context]
-    C --> F[Integration Context]
+    C --> F[System Integration Context]
 
     D --> G[OpenAI / Azure OpenAI Evidence Extraction]
     E --> H[Python Governance Engine]
