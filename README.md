@@ -41,3 +41,61 @@ The MVP supports two paths:
 ## Project Goal
 
 To demonstrate how AI can help GRC, TPRM, Security, Privacy, Legal, and Procurement teams enable technology adoption securely, transparently, and efficiently.
+
+## System Architecture
+
+VendorWise AI supports the third-party risk lifecycle from procurement intake and vendor pre-screening through evidence-based assessment, human approval, and ongoing monitoring.
+
+### Executive Workflow
+
+```mermaid
+flowchart TD
+
+A[Business Need]
+    --> B[Procurement Intake]
+
+B --> C[ISO Vendor Engagement Intake]
+
+C --> D{Vendor Already Selected?}
+
+D -- No --> E[AGENT: Vendor Triage and Pre-Screening]
+
+E --> F[Business Selects Preferred Vendor]
+
+D -- Yes --> G[ENGINE: Assessment Scoping Engine]
+F --> G
+
+G --> H[Targeted Business Questions<br/>and Vendor Evidence Submission]
+
+H --> I[AI-Powered ISO Vendor Assessment Workflow]
+
+I --> J[ISO Analyst Review]
+
+J --> K{Final Decision}
+
+K -- Approve --> L[Vendor Inventory]
+
+K -- Approve with Conditions --> M[Vendor Inventory]
+
+K -- Reject --> Z[Assessment Closed and Retained]
+
+L --> N[System and Integration Inventory]
+M --> N
+
+M --> O[Risk Treatment Register]
+
+N --> P[Assessment Repository]
+O --> P
+
+P --> Q[Ongoing Monitoring]
+
+Q --> R{Material Change or Scheduled Review?}
+
+R -- Yes --> G
+R -- No --> Q
+```
+
+### Detailed Architecture
+
+- [Executive Workflow](docs/executive-workflow.md)
+- [AI-Powered ISO Vendor Assessment Workflow](docs/ai-powered-iso-vendor-assessment-workflow.md)
