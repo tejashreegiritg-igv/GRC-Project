@@ -4,9 +4,9 @@ This workflow illustrates how VendorWise AI performs an evidence-first vendor se
 
 ## Component types
 
-- **Engine:** Applies deterministic rules to determine the assessment scope and evidence requirements.
-- **Agent:** Uses AI to analyze documents, responses, gaps, and risk-treatment options.
-- **System:** Collects vendor evidence and business or vendor responses.
+- **Engine:** Python API - Applies deterministic rules to determine the assessment scope and evidence requirements.
+- **Agent:** Open AI API - Uses AI to analyze documents, responses, gaps, and risk-treatment options.
+- **System:** Dataverse API - Collects vendor evidence and business or vendor responses.
 - **Human:** Validates the findings and produces the final assessment.
 
 ```mermaid
