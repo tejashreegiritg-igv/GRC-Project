@@ -6,6 +6,24 @@ This workflow illustrates how VendorWise AI performs an evidence-first vendor se
 
 - **Engine:** Python API - Applies deterministic rules to determine the assessment scope and evidence requirements.
 - **Agent:** Open AI API - Uses AI to analyze documents, responses, gaps, and risk-treatment options.
+
+## AI Agents
+
+| AI Agent | Primary Role |
+|----------|--------------|
+| **1. Vendor Triage & Pre-Screening Agent** | Determines the assessment scope by evaluating the vendor, business use case, data sensitivity, integration type, applicable regulations, and required evidence. |
+| **2. Response Analysis Agent** | Reviews questionnaire responses, identifies inconsistencies or missing information, and generates intelligent follow-up questions instead of relying on static questionnaires. |
+| **3. Evidence Intelligence Agent** | Analyzes uploaded security documents (SOC 2, ISO 27001, ISO 42001, DPA, Privacy Policy, penetration test reports, etc.), extracts relevant controls, identifies gaps, and maps evidence to compliance frameworks. |
+| **4. Gap Analysis & Risk Treatment Agent** | Combines business context, questionnaire responses, document analysis, and governance rules to identify control gaps, recommend compensating controls, assign a risk rating, and generate an onboarding recommendation (Approve, Approve with Conditions, or Reject). |
+
+## Supporting Components (Non-AI)
+
+| Component | Role |
+|----------|------|
+| **Power Automate** | Orchestrates the end-to-end workflow by coordinating AI agents, integrations, notifications, and approvals. |
+| **Python Governance Engine** | Applies deterministic governance rules for inherent risk classification, vendor criticality, framework crosswalks, risk scoring, and approval thresholds. |
+| **Human Reviewer** | Reviews AI-generated recommendations, validates findings, and makes the final vendor onboarding decision to ensure accountability and governance. |
+
 - **System:** Dataverse API - Collects vendor evidence and business or vendor responses.
 - **Human:** Validates the findings and produces the final assessment.
 
